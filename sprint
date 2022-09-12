@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+    lpr 'input.txt'
+elif [ $# -eq 1 ]
+then
+    filepath="$1"
+    lpr "$filepath"
+elif [ $# -eq 2 ]
+then
+    printer_id="$1"
+    filepath="$2"
+    lpr -P "$printer_id" "$filepath"
+else
+    echo -e 'Usage:
+    \tsprint
+    \tsprint $filename
+    \tsprint $printer_id $filename
+    '
+fi

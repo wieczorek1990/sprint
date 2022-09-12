@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lpstat -a | cut -f 1 -d ' '
