@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lpstat -t | head -n 2 | tail -n 1 | rev | cut -f1 -d' ' | rev
